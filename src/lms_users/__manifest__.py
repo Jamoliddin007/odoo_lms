@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "odoo_lms",
+    'name': "lms_users",
 
     'summary': "Learning Management System for Odoo",
 
@@ -14,7 +14,7 @@ Odoo LMS — manage students, teachers, and operators efficiently.
     'category': 'Education',
     'version': '0.1',
 
-    'depends': ['base'],
+    'depends': ['base', 'lms_core'],
 
     'data': [
         'security/ir.model.access.csv',
