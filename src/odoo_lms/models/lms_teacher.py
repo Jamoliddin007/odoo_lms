@@ -1,15 +1,16 @@
 from odoo import models, fields
 
-
-class Teacher(models.Model):
+class LmsTeacher(models.Model):
     _name = 'lms.teacher'
-    _description = 'LMS Teacher'
     _inherits = {'res.users': 'user_id'}
+    _description = 'LMS Teacher Profile'
 
-    user_id = fields.Many2one('res.users', string='User', required=True, ondelete='cascade')
+    user_id = fields.Many2one('res.users', required=True, ondelete='cascade')
     subject_ids = fields.Many2many('lms.subject', string='Subjects')
-    specialization = fields.Char(string='Specialization')
     hire_date = fields.Date(string='Hire Date')
     salary = fields.Float(string='Salary')
-    rating = fields.Float(string='Rating')
-    is_active = fields.Boolean(string='Currently Teaching', default=True)
+    level = fields.Selection([
+        ('junior', 'Junior Teacher'),
+        ('middle', 'Middle Teacher'),
+        ('senior', 'Senior Teacher'),
+    ], string='Teacher Level')
