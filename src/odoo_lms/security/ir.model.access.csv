@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_lms_student_user,lms.student.user,model_lms_student,base.group_user,1,1,1,1
+access_lms_teacher_user,lms.teacher.user,model_lms_teacher,base.group_user,1,1,1,1
+access_lms_operator_user,lms.operator.user,model_lms_operator,base.group_user,1,1,1,1
+access_res_users_lms,res.users.lms,model_res_users,base.group_user,1,1,1,1
